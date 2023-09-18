@@ -1,10 +1,10 @@
 export const NAV_LIST = [
-    "Home",
-    "Current",
-    "International",
-    "Sports",
+    "home",
+    "current",
+    "international",
+    "sports",
     "weather",
-    "About"
+    "about"
 ]
 
 
