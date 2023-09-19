@@ -1,8 +1,14 @@
-import React from 'react'
+import { ReactNode } from "react"
 
-const NewsTitle = () => {
+interface Props {
+  children: ReactNode
+}
+
+const NewsTitle: React.FC<Props> = ({ children }) => {
   return (
-    <div>NewsTitle</div>
+    <h2 className='text-base md:text-2xl text-dark font-bold'>
+      {children}
+    </h2>
   )
 }
 
