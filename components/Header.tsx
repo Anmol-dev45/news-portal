@@ -27,7 +27,13 @@ const Header = () => {
           </div>
         </Container>
       </div>
-      <Navbar />
+      <div className='max-md:flex justify-between items-center px-2'>
+        <div className='md:hidden'>
+
+          <Logo />
+        </div>
+        <Navbar />
+      </div>
     </header>
   )
 }

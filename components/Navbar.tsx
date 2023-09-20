@@ -25,12 +25,12 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <section className={` ${isSticky ? 'md:bg-dark transition-all duration-300 w-screen fixed md:top-0 md:left-0' : null} `}>
+    <section className={` ${isSticky ? ' transition-all duration-300 fixed md:top-0 md:left-0 md:right-0' : null}`}>
       <Container>
-        <nav className={`w-2/3 max-md:fixed max-md:bg-dark/90   md:w-full flex items-center z-20 max-md:right-0 max-md:top-0 max-md:h-screen max-md:flex-col max-md:pt-16 ${isOpen ? 'max-md:translate-x-0' : 'max-md:translate-x-full'} transition-all duration-300 ease-in-out`}>
+        <nav className={`w-2/3 ${isSticky && 'shadow-2xl'} max-md:fixed max-md:bg-dark/90   md:w-full flex items-center z-20 max-md:right-0 max-md:top-0 max-md:h-screen max-md:flex-col max-md:pt-16 ${isOpen ? 'max-md:translate-x-0' : 'max-md:translate-x-full'} transition-all duration-300 ease-in-out`}>
           {NAV_LIST.map((item, _i) => <Link href={`/${item == 'home' ? '' : item}`} key={item} className={`capitalize font-medium md:bg-dark ${_i == NAV_LIST.length - 1 ? 'border-0' : 'md:border-r-[0.7px]'}  w-full text-center max-md:hover:bg-dark hover:bg-dark/90 max-md:py-6 py-4 text-white border-white`}>{item}</Link>)}
         </nav>
-        <div className='md:hidden z-40 fixed right-0 text-4xl' onClick={() => setIsOpen(!isOpen)}>
+        <div className='md:hidden z-40 fixed right-0 text-4xl -mt-3' onClick={() => setIsOpen(!isOpen)}>
           {
             !isOpen ? <HiMenu /> : <AiOutlineClose />
 

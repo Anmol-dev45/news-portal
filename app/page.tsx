@@ -1,15 +1,13 @@
-import Latest from "@/components/Latest"
-import NewsCard from "@/components/NewsCard"
-import SectionTitle from "@/components/SectionTitle"
-import { NEWS } from "@/lib/dummy"
-import path from "path"
+import CurrentAffair from "@/components/CurrentAffair";
+import Hero from "@/components/Hero";
+
 export default function Home() {
   return (
     <>
-      <SectionTitle title="current affairs" />
-      <div className="w-[460px]">
-        <Latest />
-      </div>
+
+      <Hero />
+      <CurrentAffair />
+
     </>
   )
 }
