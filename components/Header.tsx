@@ -9,8 +9,8 @@ import Logo from './Logo'
 
 const Header = () => {
   return (
-    <header className='py-8'>
-      <div className='mb-6'>
+    <header className='py-2 md:py-8'>
+      <div className='mb-1 md:mb-6'>
         <Container>
           <div className="flex justify-between items-end">
             <div className="flex gap-8 max-md:justify-between max-md:w-full items-center">
