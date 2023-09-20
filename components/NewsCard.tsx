@@ -17,7 +17,8 @@ const NewsCard: React.FC<Props> = ({ image, title, description, id }) => {
         <Image src={image}
           height={240}
           width={375}
-          alt='image of news' />
+          sizes='(max-width: 375px) 100vw, 375px'
+          alt='image of news' className='md:w-[375px] object-cover md:h-[240px]' />
       </div>
       <div className='mt-2'>
         <NewsTitle>{title}</NewsTitle>

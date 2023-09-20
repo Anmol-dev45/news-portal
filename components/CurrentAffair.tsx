@@ -7,7 +7,7 @@ const CurrentAffair = async () => {
 
 
 
-  const res = await fetch('https://dummyjson.com/products')
+  const res = await fetch('https://dummyjson.com/products', {cache: "no-cache"})
   const data = await res.json()
 
   const news = data['products'].map((product: any) => {
@@ -26,7 +26,7 @@ const CurrentAffair = async () => {
         <div>
           <SectionTitle title="Common Affairs" />
         </div>
-        <div className="flex gap-8 flex-wrap justify-start mt-12">
+        <div className="flex max-md:gap-16 gap-8 flex-wrap justify-start mt-12">
           {news.map(({ id, title, description, image }:
             {
               id: number;
